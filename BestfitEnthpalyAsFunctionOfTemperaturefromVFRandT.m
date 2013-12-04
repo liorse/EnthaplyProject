@@ -14,6 +14,16 @@ load data.mat
 hold off
 plot(MeasuredData(:,1)+273.15,MeasuredData(:,2),'*')
 
+datax=[0 1 2 3 4 5];
+datay=datax;
+% Non linear fit data
+% let a and b be:
+a = -4.9e2;
+b = 2.8e5;
+% Don't fit on the part that is close to zero, Set the threshold for zero
+Threshold = 0.06;
+T = MeasuredData(MeasuredData(:,2)>Threshold,1)+273.15;
+VFRm = MeasuredData(MeasuredData(:,2)>Threshold,2)';
 
 
 %Coef=[-4.9e2, 2.8e5];
