@@ -12,7 +12,7 @@ load data.mat
 
 % Plot Measured Data of VFR as a function of T
 hold off
-plot(MeasuredData(:,1)+273.15,MeasuredData(:,2),'*')
+plot(MeasuredData(:,1)+273.12,MeasuredData(:,2),'*')
 
 datax=[0 1 2 3 4 5];
 datay=datax;
