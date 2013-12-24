@@ -14,7 +14,7 @@ PPRT    = 2.77e-5;      % Partial pressure at room temperature [Pascal]
 %T       = data(:,1);    % Oven temperature [K]
 %T       = linspace(298,400,400);
 %DeltaH  = linspace(100e3,50e3,10);        % Enthalpy [J/mol]
-DeltaH  = a*T+b+c*T.^2;        % Enthalpy [J/mol]
+DeltaH  = a*T+b+c*T^2;        % Enthalpy [J/mol]
 T_amb   = 298;          % Room temperature [K]
 Di      = 101.8;        % Initial diameter in nm
 

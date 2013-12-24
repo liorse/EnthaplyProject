@@ -23,16 +23,16 @@ VFRm = MeasuredData(MeasuredData(:,2)>Threshold,2)';
 
 
 %Coef=[-4.9e2, 2.8e5];
-Chi2 = @(Coef) sum((VFR(Coef(1),Coef(2),T)-VFRm).^2);
+Chi2 = @(Coef) sum((VFR(Coef(1),Coef(2), Coef(3),T)-VFRm).^2);
 
-coef = fminsearch(Chi2, [-4.9e2 2.8e5])
+coef = fminsearch(Chi2, [-4.9e2 2.8e5 0])
 
 %% Plot Result of best fit
 
 subplot(2,1,1)
 hold off
 %VFRfit = VFR(-69.618110996500008,1.398873976775031e5,T);
-VFRfit = VFR(coef(1),coef(2),T);
+VFRfit = VFR(coef(1),coef(2), coef(3),T);
 plot(T, VFRfit) 
 hold all
 plot(MeasuredData(:,1)+273.15,MeasuredData(:,2),'*')
