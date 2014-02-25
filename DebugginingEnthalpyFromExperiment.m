@@ -25,15 +25,31 @@ Di = Di * 1e-9; % diameter in m
 
 % Physical parameters for containing molecular crystal
 % adipic methylamine salt (2:1)
-MolMass         = 0.2083;       % Molecular weight [kg/mol]
-Density         = 1154.5;        % Molecular crystal density [kg/m^3]
-Gamma_i           = 0.1;        % ------------- [J/m^2]
-Sigmaii         = 7.22e-10;       % ------------- [m]
-Epsilonii_kb    = 646.3; %708.21;        % Epsilon/Kb    [K]
-Alpha           = 1;             % accomodation coef. is set to 1 in this calculation
+% MolMass         = 0.2083;       % Molecular weight [kg/mol]
+% Density         = 1154.5;        % Molecular crystal density [kg/m^3]
+% Gamma_i           = 0.1;        % ------------- [J/m^2]
+% Sigmaii         = 7.22e-10;       % ------------- [m]
+% Epsilonii_kb    = 646.3; %708.21;        % Epsilon/Kb    [K]
+% Alpha           = 1;             % accomodation coef. is set to 1 in this calculation
 
+% %substance(25).name='cis pinonic acid';
+% MolMass         = 0.18424;       % Molecular weight [kg/mol]
+% Density         = 1230;        % Molecular crystal density [kg/m^3]
+% Gamma_i           = 0.1;        % ------------- [J/m^2]
+% Sigmaii         = 6.76e-10;       % ------------- [m]
+% Epsilonii_kb    = 670.98; %708.21;        % Epsilon/Kb    [K]
+% Alpha           = 1;             % accomodation coef. is set to 1 in this calculation
+
+%substance(25).name='DMAC';
+MolMass         = 0.0911;       % Molecular weight [kg/mol]
+Density         = 1195.8;        % Molecular crystal density [kg/m^3]
+Gamma_i           = 0.1;        % ------------- [J/m^2]
+Sigmaii         = 5.49e-10;       % ------------- [m]
+Epsilonii_kb    = 523.98; %708.21;        % Epsilon/Kb    [K]
+Alpha           = 1;             % accomodation coef. is set to 1 in this calculation
+ 
 % Physical parameters for containing molecular crystal
-% Addipic Acid for an example
+% Adipic Acid for an example
 % MolMass         = 0.14614;       % Molecular weight [kg/mol]
 % Density         = 1.36e3;        % Molecular crystal density [kg/m^3]
 % Gamma_i           = 0.06;        % ------------- [J/m^2]
@@ -42,7 +58,7 @@ Alpha           = 1;             % accomodation coef. is set to 1 in this calcul
 % Alpha           = 1;             % accomodation coef. is set to 1 in this calculation
 
 AirMass         = 0.02897;       % Air Mass [kg/mol]
-MeltingPoint    = 426;           % Melting point [K]
+MeltingPoint    = 326;           % Melting point [K]
 SigmaAir        = 3.617e-10;     % Interparticle distance in which the potential is zero
 R               = 8.3144621;     % Gas constant [J/(mol*K)]
 EpsilonAir_kb   = 97.0;          % Potential well depth

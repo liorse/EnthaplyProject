@@ -8,7 +8,7 @@
 % temperature.
 clear all;clc
 
-load data.mat
+load data2.mat
 
 % Plot Measured Data of VFR as a function of T
 hold off
@@ -21,18 +21,18 @@ Threshold = 0.06;
 T = MeasuredData(MeasuredData(:,2)>Threshold,1)+273.15;
 VFRm = MeasuredData(MeasuredData(:,2)>Threshold,2)';
 
-
+tic
 %Coef=[-4.9e2, 2.8e5];
-Chi2 = @(Coef) sum((VFR(Coef(1),Coef(2), Coef(3),T)-VFRm).^2);
+Chi2 = @(Coef) sum((VFR(Coef(1),Coef(2),T)-VFRm).^2);
 
-coef = fminsearch(Chi2, [-4.9e2 2.8e5 0])
-
+coef = fminsearch(Chi2, [-5e2 2.8e5]);
+toc
 %% Plot Result of best fit
 
 subplot(2,1,1)
 hold off
 %VFRfit = VFR(-69.618110996500008,1.398873976775031e5,T);
-VFRfit = VFR(coef(1),coef(2), coef(3),T);
+VFRfit = VFR(coef(1),coef(2),1,T);
 plot(T, VFRfit) 
 hold all
 plot(MeasuredData(:,1)+273.15,MeasuredData(:,2),'*')
